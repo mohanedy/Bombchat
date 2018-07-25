@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		787D09AD5A88CAB2A92819C2 /* Pods_Bombchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5F10A69540AAF4F1D23406 /* Pods_Bombchat.framework */; };
+		C9055BCF21078E7900C3B5F9 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9055BCE21078E7900C3B5F9 /* UsersTableViewController.swift */; };
+		C9055BD12107986400C3B5F9 /* SelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9055BD02107986400C3B5F9 /* SelectPictureViewController.swift */; };
+		C90ACD492106FDFA00221D0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C90ACD482106FDFA00221D0A /* GoogleService-Info.plist */; };
 		C92BC98D21050DD00020DC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BC98C21050DD00020DC7F /* AppDelegate.swift */; };
-		C92BC98F21050DD00020DC7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BC98E21050DD00020DC7F /* ViewController.swift */; };
+		C92BC98F21050DD00020DC7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BC98E21050DD00020DC7F /* LoginViewController.swift */; };
 		C92BC99221050DD00020DC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92BC99021050DD00020DC7F /* Main.storyboard */; };
 		C92BC99421050DD20020DC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C92BC99321050DD20020DC7F /* Assets.xcassets */; };
 		C92BC99721050DD20020DC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92BC99521050DD20020DC7F /* LaunchScreen.storyboard */; };
+		C98E924B2107DCB100427276 /* SelectReciverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E924A2107DCB100427276 /* SelectReciverTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047C1FF8954487968F43E2FC /* Pods-Bombchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bombchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bombchat/Pods-Bombchat.debug.xcconfig"; sourceTree = "<group>"; };
+		2F5F10A69540AAF4F1D23406 /* Pods_Bombchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bombchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9055BCE21078E7900C3B5F9 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		C9055BD02107986400C3B5F9 /* SelectPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPictureViewController.swift; sourceTree = "<group>"; };
+		C90ACD482106FDFA00221D0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C92BC98921050DD00020DC7F /* Bombchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bombchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92BC98C21050DD00020DC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C92BC98E21050DD00020DC7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C92BC98E21050DD00020DC7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C92BC99121050DD00020DC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C92BC99321050DD20020DC7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C92BC99621050DD20020DC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C92BC99821050DD20020DC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98E924A2107DCB100427276 /* SelectReciverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectReciverTableViewController.swift; sourceTree = "<group>"; };
+		F84553498E24FA763A470451 /* Pods-Bombchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bombchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bombchat/Pods-Bombchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787D09AD5A88CAB2A92819C2 /* Pods_Bombchat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99E5EEC8DE97572E59F8A0D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				047C1FF8954487968F43E2FC /* Pods-Bombchat.debug.xcconfig */,
+				F84553498E24FA763A470451 /* Pods-Bombchat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A92B6EFCE24F13504719D4C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F5F10A69540AAF4F1D23406 /* Pods_Bombchat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C92BC98021050DD00020DC7F = {
 			isa = PBXGroup;
 			children = (
 				C92BC98B21050DD00020DC7F /* Bombchat */,
 				C92BC98A21050DD00020DC7F /* Products */,
+				99E5EEC8DE97572E59F8A0D5 /* Pods */,
+				A92B6EFCE24F13504719D4C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,8 +86,12 @@
 		C92BC98B21050DD00020DC7F /* Bombchat */ = {
 			isa = PBXGroup;
 			children = (
+				C90ACD482106FDFA00221D0A /* GoogleService-Info.plist */,
 				C92BC98C21050DD00020DC7F /* AppDelegate.swift */,
-				C92BC98E21050DD00020DC7F /* ViewController.swift */,
+				C92BC98E21050DD00020DC7F /* LoginViewController.swift */,
+				C9055BCE21078E7900C3B5F9 /* UsersTableViewController.swift */,
+				C9055BD02107986400C3B5F9 /* SelectPictureViewController.swift */,
+				C98E924A2107DCB100427276 /* SelectReciverTableViewController.swift */,
 				C92BC99021050DD00020DC7F /* Main.storyboard */,
 				C92BC99321050DD20020DC7F /* Assets.xcassets */,
 				C92BC99521050DD20020DC7F /* LaunchScreen.storyboard */,
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C92BC99B21050DD20020DC7F /* Build configuration list for PBXNativeTarget "Bombchat" */;
 			buildPhases = (
+				755B68DCE3F5FC44000D3B24 /* [CP] Check Pods Manifest.lock */,
 				C92BC98521050DD00020DC7F /* Sources */,
 				C92BC98621050DD00020DC7F /* Frameworks */,
 				C92BC98721050DD00020DC7F /* Resources */,
+				F01D16266B24F72E40ED4BB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,18 +163,67 @@
 				C92BC99721050DD20020DC7F /* LaunchScreen.storyboard in Resources */,
 				C92BC99421050DD20020DC7F /* Assets.xcassets in Resources */,
 				C92BC99221050DD00020DC7F /* Main.storyboard in Resources */,
+				C90ACD492106FDFA00221D0A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		755B68DCE3F5FC44000D3B24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bombchat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F01D16266B24F72E40ED4BB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bombchat/Pods-Bombchat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bombchat/Pods-Bombchat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C92BC98521050DD00020DC7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C92BC98F21050DD00020DC7F /* ViewController.swift in Sources */,
+				C92BC98F21050DD00020DC7F /* LoginViewController.swift in Sources */,
+				C98E924B2107DCB100427276 /* SelectReciverTableViewController.swift in Sources */,
+				C9055BD12107986400C3B5F9 /* SelectPictureViewController.swift in Sources */,
 				C92BC98D21050DD00020DC7F /* AppDelegate.swift in Sources */,
+				C9055BCF21078E7900C3B5F9 /* UsersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +365,7 @@
 		};
 		C92BC99C21050DD20020DC7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 047C1FF8954487968F43E2FC /* Pods-Bombchat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = mohaned.Bombchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,6 +385,7 @@
 		};
 		C92BC99D21050DD20020DC7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F84553498E24FA763A470451 /* Pods-Bombchat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +395,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = mohaned.Bombchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

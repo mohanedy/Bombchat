@@ -1,0 +1,6 @@
+framework module Pods_Bombchat {
+  umbrella header "Pods-Bombchat-umbrella.h"
+
+  export *
+  module * { export * }
+}
