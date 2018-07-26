@@ -16,7 +16,7 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var messageTextField: UITextField!
     var imageAdded = false
-    
+    var imageName = "\(NSUUID().uuidString).jpg"
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -55,15 +55,13 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func nextPressed(_ sender: UIButton) {
-        //DELETE This:
-        messageTextField.text = "Test"
-        imageAdded = true
+        
         if let message = messageTextField.text {
             if (imageAdded && message != ""){
                 let imagesFolder = Storage.storage().reference().child("images")
                 if let image = imageView.image{
                     if let imageData =  UIImageJPEGRepresentation(image, 0.1){
-                        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil) { (metadata, error) in
+                        imagesFolder.child(imageName).putData(imageData, metadata: nil) { (metadata, error) in
                             if let err = error{
                                 self.displayAlert(title:"Error", message: err.localizedDescription)
                             }else{
@@ -74,6 +72,7 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
                                                 self.displayAlert(title: "Error", message:err.localizedDescription)
                                             }else{
                                                 if let photoUrl = url?.absoluteString{
+                                                   
                                                     self.performSegue(withIdentifier: "SendToSegue", sender: photoUrl)
                                                 }
                                             }
@@ -102,6 +101,7 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
             if let  downlod = sender as? String{
                 selectVC.downloadURL = downlod
                 selectVC.message = messageTextField.text!
+                selectVC.imageName = imageName
             }
         }
         

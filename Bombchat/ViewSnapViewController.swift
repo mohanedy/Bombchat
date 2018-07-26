@@ -7,29 +7,48 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
+import FirebaseAuth
+import SDWebImage
+import FirebaseStorage
 class ViewSnapViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
+    var snap : DataSnapshot?
+    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if let snapData = snap{
+            if let snapDictionary = snapData.value as? NSDictionary{
+                if let message = snapDictionary["message"] as? String{
+                    if let imageURL = snapDictionary["imageURL"] as? String{
+                        messageLabel.text = message
+                        imageView.sd_setImage(with: URL(string: imageURL), completed: nil)
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillDisappear(_ animated: Bool) {
+        Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!).child("snaps").child((snap?.key)!).removeValue()
+        if let snapData = snap{
+            if let snapDictionary = snapData.value as? NSDictionary{
+                if let imageName = snapDictionary["imageName"] as? String{
+                    Storage.storage().reference().child("images").child(imageName).delete(completion: nil)
+                    
+                }
+            }
+        }
+        
+        
+        
     }
-    */
-
+    
+    
+    
+    
 }

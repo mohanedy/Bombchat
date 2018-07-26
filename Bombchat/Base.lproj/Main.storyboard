@@ -121,13 +121,13 @@
         <!--Messages-->
         <scene sceneID="cKA-Dq-YrR">
             <objects>
-                <tableViewController id="wrR-YE-QPG" customClass="UsersTableViewController" customModule="Bombchat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wrR-YE-QPG" customClass="SnapsTableViewController" customModule="Bombchat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ymo-Ui-nmt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.13333333333333333" green="0.15294117647058825" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="rVz-rN-Uzu">
@@ -166,10 +166,58 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <segue destination="9iS-zR-Pj5" kind="show" identifier="ViewSnapSegue" id="j3z-KJ-Eeo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufk-VL-aAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2540" y="118.29085457271366"/>
+        </scene>
+        <!--View Snap View Controller-->
+        <scene sceneID="abP-3X-oBu">
+            <objects>
+                <viewController id="9iS-zR-Pj5" customClass="ViewSnapViewController" customModule="Bombchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="myq-fr-ck8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryx-vV-6A3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="507"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ryx-vV-6A3" secondAttribute="height" multiplier="125:169" id="ci2-B2-q0x"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-1s-97b">
+                                <rect key="frame" x="16" y="584" width="343" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="QRs-zs-k5x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.93768787384033203" green="0.46687626838684082" blue="0.55203676223754883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ryx-vV-6A3" firstAttribute="trailing" secondItem="HU0-If-uw1" secondAttribute="trailing" id="8Y6-9u-Yaw"/>
+                            <constraint firstItem="ryx-vV-6A3" firstAttribute="leading" secondItem="HU0-If-uw1" secondAttribute="leading" id="ave-wY-yLY"/>
+                            <constraint firstItem="2BF-1s-97b" firstAttribute="leading" secondItem="HU0-If-uw1" secondAttribute="leading" constant="16" id="eIG-l7-D5E"/>
+                            <constraint firstItem="ryx-vV-6A3" firstAttribute="top" secondItem="HU0-If-uw1" secondAttribute="top" id="nRR-2o-z0Y"/>
+                            <constraint firstItem="2BF-1s-97b" firstAttribute="top" secondItem="ryx-vV-6A3" secondAttribute="bottom" constant="13" id="qqO-Su-Jgr"/>
+                            <constraint firstItem="HU0-If-uw1" firstAttribute="trailing" secondItem="2BF-1s-97b" secondAttribute="trailing" constant="16" id="rAF-Cb-In3"/>
+                            <constraint firstItem="HU0-If-uw1" firstAttribute="bottom" secondItem="2BF-1s-97b" secondAttribute="bottom" id="v85-yG-YbM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HU0-If-uw1"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ryx-vV-6A3" id="zMA-CX-XRe"/>
+                        <outlet property="messageLabel" destination="2BF-1s-97b" id="dr2-uQ-Dva"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2m-Wc-Nws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540" y="895.50224887556226"/>
         </scene>
         <!--Select Picture View Controller-->
         <scene sceneID="Bck-Ym-1cK">
@@ -257,7 +305,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReciverCell" id="vFS-eQ-mxu">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -312,6 +360,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4Wb-Em-dew" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1B6-Nf-a73">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -326,10 +375,10 @@
             </objects>
             <point key="canvasLocation" x="2540" y="-602"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="AqH-kL-Ba6">
             <objects>
-                <viewController id="0BP-CR-Vxi" sceneMemberID="viewController">
+                <viewController id="0BP-CR-Vxi" customClass="SearchViewController" customModule="Bombchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MuQ-lo-R6o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,7 +387,28 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <color key="barTintColor" red="0.25047355890274048" green="0.27104228734970093" blue="0.29418125748634338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0BP-CR-Vxi" id="EoI-Ba-WSA"/>
+                                </connections>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-R9-sZs">
+                                <rect key="frame" x="16" y="183" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.93768787384033203" green="0.46687626838684082" blue="0.55203676223754883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H3-6Q-I3s">
+                                <rect key="frame" x="16" y="243" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.46666666670000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPressed:" destination="0BP-CR-Vxi" eventType="touchUpInside" id="pvA-fP-ffR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13283038139343262" green="0.15357115864753723" blue="0.18047457933425903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -349,22 +419,27 @@
                         <viewLayoutGuide key="safeArea" id="wIX-5r-UlN"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Rpn-Tl-hPE"/>
+                    <connections>
+                        <outlet property="addButton" destination="0H3-6Q-I3s" id="7le-fS-urQ"/>
+                        <outlet property="emailLabel" destination="wFb-R9-sZs" id="BC9-jJ-afa"/>
+                        <outlet property="searchBar" destination="3P9-CJ-ZR9" id="R8g-n3-h6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4G5-SK-Lxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3576" y="-621"/>
+            <point key="canvasLocation" x="3575.1999999999998" y="-621.13943028485767"/>
         </scene>
         <!--Friends-->
         <scene sceneID="HwX-5r-LxZ">
             <objects>
-                <tableViewController id="dgE-ZJ-kYS" sceneMemberID="viewController">
+                <tableViewController id="dgE-ZJ-kYS" customClass="FriendsTableViewController" customModule="Bombchat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BCe-3H-8xa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1328303814" green="0.15357115860000001" blue="0.18047457929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bCJ-8y-wpj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="bCJ-8y-wpj">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bCJ-8y-wpj" id="JJF-qL-FLJ">
@@ -379,7 +454,7 @@
                             <outlet property="delegate" destination="dgE-ZJ-kYS" id="VwP-sO-I8m"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Friends" badgeValue="1" selectedImage="friendship" id="Ws8-xN-BsR"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="friendship" badgeValue="1" id="Ws8-xN-BsR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3p-1o-SBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

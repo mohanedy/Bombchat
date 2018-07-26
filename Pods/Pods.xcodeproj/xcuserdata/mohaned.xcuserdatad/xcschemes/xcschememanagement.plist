@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>SwiftyButton.xcscheme</key>
 		<dict>
 			<key>orderHint</key>

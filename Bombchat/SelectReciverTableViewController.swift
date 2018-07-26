@@ -13,7 +13,7 @@ class SelectReciverTableViewController: UITableViewController {
     var downloadURL = ""
     var usersArray : [User] = []
     var message = ""
-    
+    var imageName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         Database.database().reference().child("users").observe(.childAdded) { (snapshot) in
@@ -40,7 +40,7 @@ class SelectReciverTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReciverCell", for: indexPath)
         let user = usersArray[indexPath.row]
-        print(user.email)
+        
         cell.textLabel?.text = user.email
         cell.textLabel?.textColor = UIColor.white
         // Configure the cell...
@@ -50,7 +50,7 @@ class SelectReciverTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = usersArray[indexPath.row]
         
-        let snap = ["from":Auth.auth().currentUser?.email,"message":message,"imageURL":downloadURL]
+        let snap = ["from":Auth.auth().currentUser?.email,"message":message,"imageURL":downloadURL,"imageName":imageName]
         
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
         navigationController?.popToRootViewController(animated: true)
