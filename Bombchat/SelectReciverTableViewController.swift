@@ -16,16 +16,21 @@ class SelectReciverTableViewController: UITableViewController {
     var imageName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        Database.database().reference().child("users").observe(.childAdded) { (snapshot) in
+        Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!).child("friends").observe(.childAdded) { (snapshot) in
             let user = User()
             if let dataDictionary = snapshot.value as? NSDictionary{
                 if let email = dataDictionary["email"] as? String{
-                    if email != Auth.auth().currentUser?.email{
+                    Database.database().reference().child("users").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
+                        print("Here")
+                        print(email)
+                        print(snapshot.key)
                         user.email = email
                         user.uid = snapshot.key
                         self.usersArray.append(user)
                         self.tableView.reloadData()
-                    }
+                    })
+                    
+                    
                 }
                 
             }

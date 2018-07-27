@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -174,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="2540" y="118.29085457271366"/>
         </scene>
-        <!--View Snap View Controller-->
+        <!--Message-->
         <scene sceneID="abP-3X-oBu">
             <objects>
                 <viewController id="9iS-zR-Pj5" customClass="ViewSnapViewController" customModule="Bombchat" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,6 +212,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HU0-If-uw1"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Message" id="y1Z-Rh-3iT">
+                        <barButtonItem key="rightBarButtonItem" title="Reply" id="y2K-vV-0vu">
+                            <connections>
+                                <segue destination="ErR-d1-dqS" kind="show" id="50l-ag-zQP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="ryx-vV-6A3" id="zMA-CX-XRe"/>
                         <outlet property="messageLabel" destination="2BF-1s-97b" id="dr2-uQ-Dva"/>
@@ -455,7 +464,7 @@
                             <outlet property="delegate" destination="dgE-ZJ-kYS" id="VwP-sO-I8m"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Friends" image="friendship" badgeValue="1" id="Ws8-xN-BsR"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="friendship" id="Ws8-xN-BsR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3p-1o-SBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,14 +480,62 @@
                         <color key="backgroundColor" red="0.1328303814" green="0.15357115860000001" blue="0.18047457929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yEg-bM-BpB" customClass="Cell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yEg-bM-BpB" customClass="RequestsTableViewCell" customModule="Bombchat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yEg-bM-BpB" id="3HT-Ck-EGS">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEh-7y-wLZ">
+                                            <rect key="frame" x="16" y="11" width="207" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThB-af-QBG">
+                                            <rect key="frame" x="301" y="6" width="74" height="30"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="74" id="X4I-gE-QCZ"/>
+                                            </constraints>
+                                            <state key="normal" title="REJECT">
+                                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8k-kL-IT0">
+                                            <rect key="frame" x="226" y="6" width="67" height="30"/>
+                                            <color key="backgroundColor" red="0.93768787379999996" green="0.46687626840000002" blue="0.55203676219999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="67" id="ZBL-c1-plE"/>
+                                            </constraints>
+                                            <state key="normal" title="ACCEPT">
+                                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
                                     <color key="backgroundColor" red="0.1328303814" green="0.15357115860000001" blue="0.18047457929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="BEh-7y-wLZ" firstAttribute="leading" secondItem="3HT-Ck-EGS" secondAttribute="leadingMargin" id="3Ds-Kk-OYz"/>
+                                        <constraint firstItem="L8k-kL-IT0" firstAttribute="baseline" secondItem="ThB-af-QBG" secondAttribute="firstBaseline" id="46B-F9-0qV"/>
+                                        <constraint firstItem="BEh-7y-wLZ" firstAttribute="centerY" secondItem="L8k-kL-IT0" secondAttribute="centerY" id="D8a-MO-lvJ"/>
+                                        <constraint firstItem="L8k-kL-IT0" firstAttribute="leading" secondItem="BEh-7y-wLZ" secondAttribute="trailing" constant="3" id="H95-Bm-dQQ"/>
+                                        <constraint firstItem="L8k-kL-IT0" firstAttribute="baseline" secondItem="ThB-af-QBG" secondAttribute="baseline" id="SyO-nq-veX"/>
+                                        <constraint firstItem="ThB-af-QBG" firstAttribute="baseline" secondItem="L8k-kL-IT0" secondAttribute="firstBaseline" id="XPG-8z-vXO"/>
+                                        <constraint firstItem="L8k-kL-IT0" firstAttribute="bottom" secondItem="ThB-af-QBG" secondAttribute="bottom" id="ZzZ-3A-UbI"/>
+                                        <constraint firstItem="ThB-af-QBG" firstAttribute="leading" secondItem="L8k-kL-IT0" secondAttribute="trailing" constant="8" symbolic="YES" id="dm9-Op-1Ee"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="BEh-7y-wLZ" secondAttribute="bottom" constant="2" id="eW2-9I-kaF"/>
+                                        <constraint firstItem="BEh-7y-wLZ" firstAttribute="baseline" secondItem="L8k-kL-IT0" secondAttribute="baseline" id="i32-3l-sgp"/>
+                                        <constraint firstItem="L8k-kL-IT0" firstAttribute="top" secondItem="3HT-Ck-EGS" secondAttribute="topMargin" constant="-5" id="n47-MA-iNn"/>
+                                        <constraint firstAttribute="trailing" secondItem="ThB-af-QBG" secondAttribute="trailing" id="osq-XS-ac3"/>
+                                        <constraint firstItem="L8k-kL-IT0" firstAttribute="top" secondItem="ThB-af-QBG" secondAttribute="top" id="q72-1T-S5i"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="acceptButton" destination="L8k-kL-IT0" id="SQa-Kd-rWq"/>
+                                    <outlet property="label" destination="BEh-7y-wLZ" id="CEZ-DJ-kf5"/>
+                                    <outlet property="rejectButton" destination="ThB-af-QBG" id="5G2-XX-Tby"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -486,11 +543,14 @@
                             <outlet property="delegate" destination="O6y-8R-k7k" id="MDl-CO-vXE"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Requests" image="users" badgeValue="1" id="Dm9-8e-rYN"/>
+                    <tabBarItem key="tabBarItem" title="Requests" image="users" id="Dm9-8e-rYN"/>
+                    <connections>
+                        <outlet property="barItem" destination="Dm9-8e-rYN" id="4nP-1A-tAg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mM-Td-oo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3575" y="-1969"/>
+            <point key="canvasLocation" x="3573.5999999999999" y="-1970.4647676161921"/>
         </scene>
     </scenes>
     <resources>
@@ -498,4 +558,7 @@
         <image name="photo-camera" width="512" height="512"/>
         <image name="users" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="50l-ag-zQP"/>
+    </inferredMetricsTieBreakers>
 </document>

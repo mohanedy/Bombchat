@@ -25,7 +25,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let email = searchBar.text {
+        if let email = searchBar.text?.lowercased() {
             (Database.database().reference().child("users").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 if let friendDictionary =  snapshot.value as? NSDictionary{
                     
@@ -50,11 +50,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBAction func addPressed(_ sender: Any) {
         
         if userID != "" {
-            Database.database().reference().child("users").child(userID).child("friendRequests").queryOrdered(byChild: "from").queryEqual(toValue: Auth.auth().currentUser?.email!).observe(.childAdded) { (snapshot) in
-                if snapshot.exists() {
+            Database.database().reference().child("users").child(userID).child("friends").queryOrdered(byChild: "email").queryEqual(toValue: Auth.auth().currentUser?.email!).observe(.value) { (snapshot) in
+                if snapshot.exists(){
                     print("exist")
-                    self.displayAlert(title: "Error", message: "You Have Requested Already 😅")
+                    self.displayAlert(title: "Error", message: "You Are Already Friends 😇")
                     self.alreadyAdded = true
+                    Database.database().reference().removeAllObservers()
                 }
                 
             }
@@ -66,6 +67,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
                 }
                 
             }
+            Database.database().reference().child("users").child(userID).child("friendRequests").queryOrdered(byChild: "from").queryEqual(toValue: Auth.auth().currentUser?.email!).observe(.childAdded) { (snapshot) in
+                if snapshot.exists() {
+                    print("exist")
+                    self.displayAlert(title: "Error", message: "You Have Requested Already 😅")
+                    self.alreadyAdded = true
+                }
+                
+            }
+            
             if (alreadyAdded == false){
             Database.database().reference().child("users").child(self.userID).child("friendRequests").childByAutoId().child("from").setValue(Auth.auth().currentUser?.email!)
                 self.displayAlert(title: "Done !", message: "Request is sent 😎")

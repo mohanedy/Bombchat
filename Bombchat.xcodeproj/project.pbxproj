@@ -11,6 +11,7 @@
 		C9055BCF21078E7900C3B5F9 /* SnapsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9055BCE21078E7900C3B5F9 /* SnapsTableViewController.swift */; };
 		C9055BD12107986400C3B5F9 /* SelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9055BD02107986400C3B5F9 /* SelectPictureViewController.swift */; };
 		C90ACD492106FDFA00221D0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C90ACD482106FDFA00221D0A /* GoogleService-Info.plist */; };
+		C912FFB4210B6F90006EAE15 /* RequestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C912FFB3210B6F90006EAE15 /* RequestsTableViewCell.swift */; };
 		C92BC98D21050DD00020DC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BC98C21050DD00020DC7F /* AppDelegate.swift */; };
 		C92BC98F21050DD00020DC7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BC98E21050DD00020DC7F /* LoginViewController.swift */; };
 		C92BC99221050DD00020DC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92BC99021050DD00020DC7F /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		C9055BCE21078E7900C3B5F9 /* SnapsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsTableViewController.swift; sourceTree = "<group>"; };
 		C9055BD02107986400C3B5F9 /* SelectPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPictureViewController.swift; sourceTree = "<group>"; };
 		C90ACD482106FDFA00221D0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C912FFB3210B6F90006EAE15 /* RequestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTableViewCell.swift; sourceTree = "<group>"; };
 		C92BC98921050DD00020DC7F /* Bombchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bombchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92BC98C21050DD00020DC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C92BC98E21050DD00020DC7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				C97A230A210938B500002C41 /* FriendsTableViewController.swift */,
 				C97A230C21093B0300002C41 /* SearchViewController.swift */,
 				C97E887B210ABA1400AE94E3 /* RequestsTableViewController.swift */,
+				C912FFB3210B6F90006EAE15 /* RequestsTableViewCell.swift */,
 				C92BC99021050DD00020DC7F /* Main.storyboard */,
 				C92BC99321050DD20020DC7F /* Assets.xcassets */,
 				C92BC99521050DD20020DC7F /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				C97E887C210ABA1400AE94E3 /* RequestsTableViewController.swift in Sources */,
 				C97A230B210938B500002C41 /* FriendsTableViewController.swift in Sources */,
 				C9055BCF21078E7900C3B5F9 /* SnapsTableViewController.swift in Sources */,
+				C912FFB4210B6F90006EAE15 /* RequestsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
