@@ -369,6 +369,7 @@
                     <connections>
                         <segue destination="dgE-ZJ-kYS" kind="relationship" relationship="viewControllers" id="Mc4-Wd-TDK"/>
                         <segue destination="0BP-CR-Vxi" kind="relationship" relationship="viewControllers" id="Gqw-si-Tc7"/>
+                        <segue destination="O6y-8R-k7k" kind="relationship" relationship="viewControllers" id="ciI-Fw-RoN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfJ-EE-Rku" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,6 +460,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3p-1o-SBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3574" y="-1281"/>
+        </scene>
+        <!--Requests-->
+        <scene sceneID="P5V-18-Ceh">
+            <objects>
+                <tableViewController id="O6y-8R-k7k" customClass="RequestsTableViewController" customModule="Bombchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qth-oM-vGB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1328303814" green="0.15357115860000001" blue="0.18047457929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yEg-bM-BpB" customClass="Cell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yEg-bM-BpB" id="3HT-Ck-EGS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.1328303814" green="0.15357115860000001" blue="0.18047457929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O6y-8R-k7k" id="YGw-nh-col"/>
+                            <outlet property="delegate" destination="O6y-8R-k7k" id="MDl-CO-vXE"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Requests" image="users" badgeValue="1" id="Dm9-8e-rYN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mM-Td-oo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3575" y="-1969"/>
         </scene>
     </scenes>
     <resources>

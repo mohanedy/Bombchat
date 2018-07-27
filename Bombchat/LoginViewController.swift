@@ -35,15 +35,26 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             displayAlert(title: "Error", message: "Make sure that you entered both email and password")
             
         }else{
+            let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+            activityIndicator.center = self.view.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.activityIndicatorViewStyle = .gray
+            view.addSubview(activityIndicator)
+            
+            activityIndicator.startAnimating()
+            UIApplication.shared.beginIgnoringInteractionEvents()
             
             if (signupMode){
                 Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
+                    activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
                     if let err = error{
                         self.displayAlert(title: "Error", message: err.localizedDescription)
-                        
+                   
                     }else{
                         if let user = result{
                         Database.database().reference().child("users").child(user.user.uid).child("email").setValue(user.user.email)
+                         
                         
                         self.performSegue(withIdentifier: "UsersSegue", sender: self)
                         }
@@ -52,11 +63,17 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 
             }else{
                 Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
+                    activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
                     if let err = error{
+                       
                         self.displayAlert(title: "Error", message: err.localizedDescription)
+                       
                         
                     }else{
+        
                        self.performSegue(withIdentifier: "UsersSegue", sender: self)
+                        
                     }
                 }
                 

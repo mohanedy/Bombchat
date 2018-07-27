@@ -19,6 +19,7 @@
 		C97A23092109199F00002C41 /* ViewSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A23082109199F00002C41 /* ViewSnapViewController.swift */; };
 		C97A230B210938B500002C41 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A230A210938B500002C41 /* FriendsTableViewController.swift */; };
 		C97A230D21093B0300002C41 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A230C21093B0300002C41 /* SearchViewController.swift */; };
+		C97E887C210ABA1400AE94E3 /* RequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97E887B210ABA1400AE94E3 /* RequestsTableViewController.swift */; };
 		C98E924B2107DCB100427276 /* SelectReciverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E924A2107DCB100427276 /* SelectReciverTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		C97A23082109199F00002C41 /* ViewSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSnapViewController.swift; sourceTree = "<group>"; };
 		C97A230A210938B500002C41 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		C97A230C21093B0300002C41 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C97E887B210ABA1400AE94E3 /* RequestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTableViewController.swift; sourceTree = "<group>"; };
 		C98E924A2107DCB100427276 /* SelectReciverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectReciverTableViewController.swift; sourceTree = "<group>"; };
 		F84553498E24FA763A470451 /* Pods-Bombchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bombchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bombchat/Pods-Bombchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				C97A23082109199F00002C41 /* ViewSnapViewController.swift */,
 				C97A230A210938B500002C41 /* FriendsTableViewController.swift */,
 				C97A230C21093B0300002C41 /* SearchViewController.swift */,
+				C97E887B210ABA1400AE94E3 /* RequestsTableViewController.swift */,
 				C92BC99021050DD00020DC7F /* Main.storyboard */,
 				C92BC99321050DD20020DC7F /* Assets.xcassets */,
 				C92BC99521050DD20020DC7F /* LaunchScreen.storyboard */,
@@ -236,6 +239,7 @@
 				C98E924B2107DCB100427276 /* SelectReciverTableViewController.swift in Sources */,
 				C9055BD12107986400C3B5F9 /* SelectPictureViewController.swift in Sources */,
 				C92BC98D21050DD00020DC7F /* AppDelegate.swift in Sources */,
+				C97E887C210ABA1400AE94E3 /* RequestsTableViewController.swift in Sources */,
 				C97A230B210938B500002C41 /* FriendsTableViewController.swift in Sources */,
 				C9055BCF21078E7900C3B5F9 /* SnapsTableViewController.swift in Sources */,
 			);

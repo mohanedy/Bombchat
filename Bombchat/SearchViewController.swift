@@ -50,10 +50,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBAction func addPressed(_ sender: Any) {
         
         if userID != "" {
-            Database.database().reference().child("users").child(userID).child("friendRequests").queryOrdered(byChild: "from").queryEqual(toValue: Auth.auth().currentUser?.email!).observeSingleEvent(of:.childAdded) { (snapshot) in
+            Database.database().reference().child("users").child(userID).child("friendRequests").queryOrdered(byChild: "from").queryEqual(toValue: Auth.auth().currentUser?.email!).observe(.childAdded) { (snapshot) in
                 if snapshot.exists() {
                     print("exist")
-                    self.displayAlert(title: "Error", message: "You Have Request Already 😅")
+                    self.displayAlert(title: "Error", message: "You Have Requested Already 😅")
                     self.alreadyAdded = true
                 }
                 
@@ -69,6 +69,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             if (alreadyAdded == false){
             Database.database().reference().child("users").child(self.userID).child("friendRequests").childByAutoId().child("from").setValue(Auth.auth().currentUser?.email!)
                 self.displayAlert(title: "Done !", message: "Request is sent 😎")
+                alreadyAdded = true
                 
             }
             
