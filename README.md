@@ -30,3 +30,5 @@ Small Social Network Looks Like Snapchat running on iOS, powered by Firebase.
 4. Run the project on your device. Sometimes you need to press cmd + shift + k to clean the project
 
 <br>
+# Developer
+Developed From Scratch By: **Mohaned Yossry AL-Feqy**
