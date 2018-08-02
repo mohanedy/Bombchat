@@ -1,4 +1,8 @@
-# small Social Network Looks Like Snapchat 
+# Bombchat
+Small Social Network Looks Like Snapchat running on iOS, powered by Firebase.
+<br>
+# Screenshots
+![An awesome example image](https://i.imgur.com/qZ9Vsf0.png "Image Title")
 <br>
 with **Bomb** messages which is deleted after viewed.
 <br>
