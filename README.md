@@ -1,5 +1,6 @@
-##small Social Network Looks Like Snapchat with bomb messages which is deleted after viewed.
+#small Social Network Looks Like Snapchat 
 <br>
-
-uses Google FireBase
-developed using Swift 4
+with **Bomb** messages which is deleted after viewed.
+<br>
+**uses Google FireBase**
+**developed using Swift 4**
