@@ -22,7 +22,10 @@ class ViewSnapViewController: UIViewController {
                 if let message = snapDictionary["message"] as? String{
                     if let imageURL = snapDictionary["imageURL"] as? String{
                         messageLabel.text = message
-                        imageView.sd_setImage(with: URL(string: imageURL), completed: nil)
+                        DispatchQueue.global(qos: .background).async {
+                            self.imageView.sd_setImage(with: URL(string: imageURL), completed: nil)
+                        }
+                        
                         
                     }
                     
