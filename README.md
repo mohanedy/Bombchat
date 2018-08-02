@@ -10,7 +10,6 @@ Small Social Network Looks Like Snapchat running on iOS, powered by Firebase.
 - User authentication
 - Fluid navigation between all screens using swipe gestures
 - Camera screen – take a photo, flash option, back/front camera
-- Snap edit – cancel, add emoji, text
 - Add friends via email address
 - Chat - Live chat with friends, show friendship
 - Chat - Send text and photo
