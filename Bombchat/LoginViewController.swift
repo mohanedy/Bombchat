@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var signupOrLoginButton: UIButton!
+   
     
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -97,7 +98,25 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         
     }
+    @IBAction func aboutPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "About", message: "Dev: @Mohaned_y98 ", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Twitter", style: .destructive, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            if let url = URL(string: "https://twitter.com/mohaned_y98") {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    }
     
     
-}
-
