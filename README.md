@@ -6,11 +6,13 @@ Small Social Network Looks Like Snapchat running on iOS, powered by Firebase.
 <br>
 ![Message](https://i.imgur.com/mPuUZj9l.png "Message") ![recived](https://i.imgur.com/SODlxo1l.png "recived")
 <br>
-with **Bomb** messages which is deleted after viewed.
+# Features
+- User authentication
+- Fluid navigation between all screens using swipe gestures
+- Camera screen – take a photo, flash option, back/front camera
+- Snap edit – cancel, add emoji, text
+- Add friends via email address
+- Chat - Live chat with friends, show friendship
+- Chat - Send text and photo
 <br>
-**uses Google FireBase**
-<br>
-**developed using Swift 4**
-<br>
-**Used Libraries**
-<br>
+# Development Environment
