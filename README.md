@@ -15,6 +15,7 @@ Small Social Network Looks Like Snapchat running on iOS, powered by Firebase.
 - Chat - Send text and photo
 
 <br>
+
 # Development Environment
 - XCode 9.4.1
 - Swift 4
@@ -22,6 +23,7 @@ Small Social Network Looks Like Snapchat running on iOS, powered by Firebase.
 - Firebase 
 
 <br>
+
 # Installation
 1. Make an account at Firebase and perform some very basic setup. (the CocoaPods Frameworks and Libraries have already been included in the repo)
 2. Download GoogleService-Info.plist and drag it into the project
@@ -29,5 +31,6 @@ Small Social Network Looks Like Snapchat running on iOS, powered by Firebase.
 4. Run the project on your device. Sometimes you need to press cmd + shift + k to clean the project
 
 <br>
+
 # Developer
 Developed From Scratch By: **Mohaned Yossry AL-Feqy**
